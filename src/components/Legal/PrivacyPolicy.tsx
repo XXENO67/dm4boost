@@ -205,24 +205,20 @@ export const PrivacyPolicy = () => {
                   </thead>
                   <tbody className="text-sm">
                     <tr className="border-b border-gta-dark">
-                      <td className="py-2">Character Data</td>
-                      <td className="py-2">{siteConfig.legal.dataRetention.characterData}</td>
+                      <td className="py-2">Order Data</td>
+                      <td className="py-2">{siteConfig.legal.dataRetention.orderData}</td>
                     </tr>
                     <tr className="border-b border-gta-dark">
                       <td className="py-2">Chat Logs</td>
                       <td className="py-2">{siteConfig.legal.dataRetention.chatLogs}</td>
                     </tr>
                     <tr className="border-b border-gta-dark">
-                      <td className="py-2">Connection Logs</td>
-                      <td className="py-2">{siteConfig.legal.dataRetention.connectionLogs}</td>
+                      <td className="py-2">Account Data</td>
+                      <td className="py-2">{siteConfig.legal.dataRetention.accountData}</td>
                     </tr>
                     <tr className="border-b border-gta-dark">
-                      <td className="py-2">Ban Records</td>
-                      <td className="py-2">{siteConfig.legal.dataRetention.banRecords}</td>
-                    </tr>
-                    <tr className="border-b border-gta-dark">
-                      <td className="py-2">Whitelist Applications</td>
-                      <td className="py-2">{siteConfig.legal.dataRetention.whitelistApplications}</td>
+                      <td className="py-2">Payment Records</td>
+                      <td className="py-2">{siteConfig.legal.dataRetention.paymentRecords}</td>
                     </tr>
                   </tbody>
                 </table>

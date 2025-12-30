@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Home, Shield, Users, ScrollText, Info, Star } from 'lucide-react'
+import { Home, Shield, Users, Info, Star } from 'lucide-react'
 import siteConfig from '../../config/site.config.json'
 
 interface NavItem {
