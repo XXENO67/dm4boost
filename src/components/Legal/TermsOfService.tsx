@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowLeft, FileText, AlertTriangle, Shield, Users, DollarSign, Ban, Video } from 'lucide-react'
+import { ArrowLeft, FileText, AlertTriangle, Shield, Users, DollarSign, Ban, MessageCircle } from 'lucide-react'
 import siteConfig from '../../config/site.config.json'
 
 export const TermsOfService = () => {
@@ -10,21 +10,21 @@ export const TermsOfService = () => {
 
   const sections = [
     { id: 'acceptance', title: '1. Acceptance of Terms', icon: <FileText /> },
-    { id: 'eligibility', title: '2. Eligibility & Access', icon: <Users /> },
-    { id: 'conduct', title: '3. Code of Conduct', icon: <Shield /> },
-    { id: 'accounts', title: '4. Account Policies', icon: <Users /> },
-    { id: 'violations', title: '5. Violations & Penalties', icon: <Ban /> },
-    { id: 'donations', title: '6. Donations & Perks', icon: <DollarSign /> },
-    { id: 'content', title: '7. Content Creation', icon: <Video /> },
+    { id: 'services', title: '2. Our Services', icon: <Shield /> },
+    { id: 'ordering', title: '3. Ordering Process', icon: <MessageCircle /> },
+    { id: 'payments', title: '4. Payments & Refunds', icon: <DollarSign /> },
+    { id: 'conduct', title: '5. Customer Conduct', icon: <Users /> },
+    { id: 'account', title: '6. Account Safety', icon: <Shield /> },
+    { id: 'violations', title: '7. Violations', icon: <Ban /> },
     { id: 'liability', title: '8. Limitation of Liability', icon: <AlertTriangle /> }
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gta-black to-gta-graphite">
+    <div className="min-h-screen bg-gradient-to-b from-wow-black to-wow-dark">
       {/* Header */}
-      <div className="bg-gta-graphite/90 backdrop-blur-sm border-b border-gta-medium sticky top-0 z-40">
+      <div className="bg-wow-dark/90 backdrop-blur-sm border-b border-wow-gold/20 sticky top-0 z-40">
         <div className="container-gta py-4">
-          <Link to="/" className="inline-flex items-center gap-2 text-gta-light hover:text-white transition-colors">
+          <Link to="/" className="inline-flex items-center gap-2 text-wow-light hover:text-white transition-colors">
             <ArrowLeft className="w-5 h-5" />
             Back to Home
           </Link>
@@ -35,26 +35,26 @@ export const TermsOfService = () => {
         <div className="max-w-4xl mx-auto">
           {/* Title */}
           <div className="text-center mb-12">
-            <Shield className="w-16 h-16 text-gta-gold mx-auto mb-4" />
+            <Shield className="w-16 h-16 text-wow-gold mx-auto mb-4" />
             <h1 className="text-5xl md:text-7xl font-bebas text-white mb-4">
               Terms of Service
             </h1>
-            <p className="text-xl text-gta-light">
+            <p className="text-xl text-wow-light">
               Last updated: {new Date(siteConfig.legal.lastUpdated).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
             </p>
           </div>
 
           {/* Table of Contents */}
           <div className="card-gta mb-12">
-            <h2 className="text-2xl font-bebas text-gta-gold mb-4">Table of Contents</h2>
+            <h2 className="text-2xl font-bebas text-wow-gold mb-4">Table of Contents</h2>
             <div className="grid md:grid-cols-2 gap-2">
               {sections.map((section) => (
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className="flex items-center gap-3 p-3 hover:bg-gta-dark/50 transition-colors rounded"
+                  className="flex items-center gap-3 p-3 hover:bg-wow-dark/50 transition-colors rounded"
                 >
-                  <span className="text-gta-green">{section.icon}</span>
+                  <span className="text-wow-gold">{section.icon}</span>
                   <span className="text-white">{section.title}</span>
                 </a>
               ))}
@@ -65,154 +65,143 @@ export const TermsOfService = () => {
           <div className="space-y-8">
             <section id="acceptance" className="card-gta">
               <h2 className="text-3xl font-bebas text-white mb-4">1. Acceptance of Terms</h2>
-              <div className="space-y-4 text-gta-light">
+              <div className="space-y-4 text-wow-light">
                 <p>
-                  By connecting to our FiveM server, you agree to be bound by these Terms of Service. 
-                  If you do not agree to these terms, you may not access or use our server.
+                  By using our WoW boosting services, you agree to be bound by these Terms of Service. 
+                  If you do not agree to these terms, please do not use our services.
                 </p>
                 <p>
-                  These terms apply to all players, staff members, and visitors of our roleplay community. 
-                  We reserve the right to update these terms at any time without prior notice.
+                  We reserve the right to update these terms at any time. Continued use of our services 
+                  after changes constitutes acceptance of the new terms.
                 </p>
               </div>
             </section>
 
-            <section id="eligibility" className="card-gta">
-              <h2 className="text-3xl font-bebas text-white mb-4">2. Eligibility & Access</h2>
-              <div className="space-y-4 text-gta-light">
-                <h3 className="text-xl font-bebas text-gta-gold">Age Requirements</h3>
+            <section id="services" className="card-gta">
+              <h2 className="text-3xl font-bebas text-white mb-4">2. Our Services</h2>
+              <div className="space-y-4 text-wow-light">
+                <p>
+                  {siteConfig.server.name} provides professional World of Warcraft boosting services including:
+                </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>You must be at least {siteConfig.legal.minAge} years old to play on our server</li>
-                  <li>Players under 18 require parental consent</li>
-                  <li>Age verification may be required for whitelist applications</li>
+                  <li>Mythic+ Dungeon runs</li>
+                  <li>Raid clears and achievements</li>
+                  <li>PvP rating boosts</li>
+                  <li>Custom boosting requests</li>
+                </ul>
+                <p className="mt-4">
+                  All services are performed by our experienced veteran team with the highest 
+                  standards of quality and safety.
+                </p>
+              </div>
+            </section>
+
+            <section id="ordering" className="card-gta">
+              <h2 className="text-3xl font-bebas text-white mb-4">3. Ordering Process</h2>
+              <div className="space-y-4 text-wow-light">
+                <h3 className="text-xl font-bebas text-wow-gold">How to Order</h3>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Contact us via Discord to discuss your requirements</li>
+                  <li>Receive a custom quote based on your needs</li>
+                  <li>Confirm your order and provide necessary details</li>
+                  <li>Payment is processed securely</li>
+                  <li>Service is scheduled and completed</li>
                 </ul>
 
-                <h3 className="text-xl font-bebas text-gta-gold mt-6">Whitelist System</h3>
+                <h3 className="text-xl font-bebas text-wow-gold mt-6">Order Requirements</h3>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>All players must pass our whitelist application</li>
-                  <li>Applications are reviewed within 48-72 hours</li>
-                  <li>False information will result in permanent ban</li>
-                  <li>Whitelist status is non-transferable</li>
+                  <li>You must be at least {siteConfig.legal.minAge} years old</li>
+                  <li>You must own the account being boosted</li>
+                  <li>Accurate information must be provided</li>
+                </ul>
+              </div>
+            </section>
+
+            <section id="payments" className="card-gta">
+              <h2 className="text-3xl font-bebas text-white mb-4">4. Payments & Refunds</h2>
+              <div className="space-y-4 text-wow-light">
+                <h3 className="text-xl font-bebas text-wow-gold">Payment Terms</h3>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Payment is required before service begins</li>
+                  <li>We accept various secure payment methods</li>
+                  <li>All prices are discussed and agreed upon before ordering</li>
+                </ul>
+
+                <h3 className="text-xl font-bebas text-wow-gold mt-6">Refund Policy</h3>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Full refund if service cannot be completed due to our fault</li>
+                  <li>Partial refunds may be offered for incomplete services</li>
+                  <li>No refunds for completed services</li>
+                  <li>Refund requests must be made within 24 hours</li>
                 </ul>
               </div>
             </section>
 
             <section id="conduct" className="card-gta">
-              <h2 className="text-3xl font-bebas text-white mb-4">3. Code of Conduct</h2>
-              <div className="space-y-4 text-gta-light">
-                <h3 className="text-xl font-bebas text-gta-gold">Prohibited Behavior</h3>
+              <h2 className="text-3xl font-bebas text-white mb-4">5. Customer Conduct</h2>
+              <div className="space-y-4 text-wow-light">
+                <p>Customers are expected to:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Harassment, discrimination, or hate speech</li>
-                  <li>Exploiting, cheating, or using unauthorized modifications</li>
-                  <li>Real-world trading of in-game assets</li>
-                  <li>Impersonating staff members</li>
-                  <li>Sharing personal information of other players</li>
-                  <li>Stream sniping or metagaming</li>
-                </ul>
-
-                <h3 className="text-xl font-bebas text-gta-gold mt-6">Roleplay Standards</h3>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Maintain character immersion at all times</li>
-                  <li>No breaking character in public areas</li>
-                  <li>Respect ongoing roleplay scenarios</li>
-                  <li>Follow New Life Rule (NLR) after death</li>
-                  <li>Comply with Fear RP guidelines</li>
+                  <li>Communicate respectfully with our team</li>
+                  <li>Provide accurate account and order information</li>
+                  <li>Not interfere with ongoing boosts</li>
+                  <li>Keep login credentials secure</li>
+                  <li>Not share service details publicly during active boosts</li>
                 </ul>
               </div>
             </section>
 
-            <section id="accounts" className="card-gta">
-              <h2 className="text-3xl font-bebas text-white mb-4">4. Account Policies</h2>
-              <div className="space-y-4 text-gta-light">
+            <section id="account" className="card-gta">
+              <h2 className="text-3xl font-bebas text-white mb-4">6. Account Safety</h2>
+              <div className="space-y-4 text-wow-light">
                 <p>
-                  Each player is allowed one account only. Account sharing is strictly prohibited 
-                  and will result in permanent suspension of all involved accounts.
+                  We take account safety seriously and implement the following measures:
                 </p>
-                <h3 className="text-xl font-bebas text-gta-gold">Account Security</h3>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>You are responsible for your account security</li>
-                  <li>Use strong, unique passwords</li>
-                  <li>Enable two-factor authentication on Discord</li>
-                  <li>Report compromised accounts immediately</li>
-                </ul>
-              </div>
-            </section>
-
-            <section id="violations" className="card-gta">
-              <h2 className="text-3xl font-bebas text-white mb-4">5. Violations & Penalties</h2>
-              <div className="space-y-4 text-gta-light">
-                <h3 className="text-xl font-bebas text-gta-gold">Warning System</h3>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>1st Offense: Verbal warning</li>
-                  <li>2nd Offense: 24-hour ban</li>
-                  <li>3rd Offense: 7-day ban</li>
-                  <li>4th Offense: 30-day ban</li>
-                  <li>5th Offense: Permanent ban</li>
+                  <li>VPN usage matching your region when required</li>
+                  <li>Secure handling of login credentials</li>
+                  <li>Professional and discreet service execution</li>
+                  <li>No unauthorized actions on your account</li>
                 </ul>
 
-                <div className="bg-gta-dark/50 p-4 rounded border-l-4 border-gta-gold mt-6">
+                <div className="bg-wow-dark/50 p-4 rounded border-l-4 border-wow-gold mt-6">
                   <p className="text-sm">
-                    <strong>Note:</strong> Severe violations may result in immediate permanent ban 
-                    without prior warnings.
+                    <strong>Note:</strong> While we take every precaution, boosting services carry 
+                    inherent risks. We are not responsible for any actions taken by Blizzard Entertainment.
                   </p>
                 </div>
               </div>
             </section>
 
-            <section id="donations" className="card-gta">
-              <h2 className="text-3xl font-bebas text-white mb-4">6. Donations & Perks</h2>
-              <div className="space-y-4 text-gta-light">
-                <p>
-                  Donations help maintain server costs and development. All donations are voluntary 
-                  and non-refundable.
-                </p>
-                <h3 className="text-xl font-bebas text-gta-gold">Donation Perks</h3>
+            <section id="violations" className="card-gta">
+              <h2 className="text-3xl font-bebas text-white mb-4">7. Violations</h2>
+              <div className="space-y-4 text-wow-light">
+                <p>The following may result in service termination without refund:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Priority queue access</li>
-                  <li>Exclusive vehicles and clothing</li>
-                  <li>Custom license plates</li>
-                  <li>Additional character slots</li>
-                  <li>Special Discord role and channels</li>
-                </ul>
-                <p className="mt-4">
-                  Donation perks do not grant immunity from rules or preferential treatment in roleplay.
-                </p>
-              </div>
-            </section>
-
-            <section id="content" className="card-gta">
-              <h2 className="text-3xl font-bebas text-white mb-4">7. Content Creation</h2>
-              <div className="space-y-4 text-gta-light">
-                <p>
-                  We encourage content creation and streaming. By playing on our server, you grant us 
-                  permission to use your content for promotional purposes.
-                </p>
-                <h3 className="text-xl font-bebas text-gta-gold">Content Guidelines</h3>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Include server name in stream titles</li>
-                  <li>No monetization of server-specific content without permission</li>
-                  <li>Respect other players' privacy preferences</li>
-                  <li>Hide sensitive UI elements when streaming</li>
+                  <li>Providing false information</li>
+                  <li>Abusive behavior towards our team</li>
+                  <li>Attempting to scam or defraud</li>
+                  <li>Interfering with active boosts</li>
+                  <li>Chargebacks without valid reason</li>
                 </ul>
               </div>
             </section>
 
             <section id="liability" className="card-gta">
               <h2 className="text-3xl font-bebas text-white mb-4">8. Limitation of Liability</h2>
-              <div className="space-y-4 text-gta-light">
+              <div className="space-y-4 text-wow-light">
                 <p>
-                  The server is provided "as is" without warranties of any kind. We are not responsible 
-                  for any loss of game progress, virtual items, or data.
-                </p>
-                <p>
-                  We reserve the right to:
+                  Our services are provided "as is". We are not liable for:
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Modify or discontinue the server at any time</li>
-                  <li>Reset player data for technical or gameplay reasons</li>
-                  <li>Change game mechanics and economy balance</li>
-                  <li>Remove inactive players from whitelist</li>
+                  <li>Actions taken by Blizzard Entertainment on your account</li>
+                  <li>Loss of in-game items or currency not related to our service</li>
+                  <li>Delays caused by factors outside our control</li>
+                  <li>Any indirect or consequential damages</li>
                 </ul>
+                <p className="mt-4">
+                  Our maximum liability is limited to the amount paid for the specific service in question.
+                </p>
               </div>
             </section>
           </div>
@@ -220,14 +209,14 @@ export const TermsOfService = () => {
           {/* Contact */}
           <div className="card-gta mt-12 text-center">
             <h2 className="text-2xl font-bebas text-white mb-4">Questions?</h2>
-            <p className="text-gta-light mb-6">
-              If you have any questions about these Terms of Service, please contact our admin team.
+            <p className="text-wow-light mb-6">
+              If you have any questions about these Terms of Service, please contact us.
             </p>
             <a 
               href={siteConfig.social.discord}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gta-gold inline-block"
+              className="btn-wow-gold inline-block"
             >
               Contact Support
             </a>
