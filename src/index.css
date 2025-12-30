@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Font Face for Epic Fantasy */
+@font-face {
+  font-family: 'WoWFont';
+  src: local('Cinzel'), local('Trajan Pro'), local('Times New Roman');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* WoW/Epic Gold & Black Color System */
+    --wow-black: #0a0a0a;
+    --wow-dark: #121212;
+    --wow-graphite: #1a1a1a;
+    --wow-medium: #2a2a2a;
+    --wow-light: #a0a0a0;
+    --wow-white: #ffffff;
+    --wow-gold: #D4AF37;
+    --wow-gold-light: #F4D03F;
+    --wow-gold-dark: #B8860B;
+    --wow-bronze: #CD7F32;
+    --wow-copper: #B87333;
+    --wow-red: #8B0000;
+    --wow-purple: #6B238E;
+    --wow-blue: #1E90FF;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-wow-black text-white font-inter;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bebas tracking-wide;
+  }
+
+  /* Custom scrollbar - Gold themed */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-wow-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-wow-gold to-wow-gold-dark rounded-full;
+    border: 2px solid var(--wow-black);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-wow-gold-light;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container-gta {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Typography */
+  .heading-wow {
+    @apply font-bebas text-white tracking-wider;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+
+  .text-gold {
+    @apply text-wow-gold;
+  }
+
+  /* WoW Style Buttons */
+  .btn-wow-gold {
+    @apply px-8 py-3 font-inter font-semibold uppercase tracking-wider transition-all duration-300;
+    @apply bg-gradient-to-b from-wow-gold via-wow-gold-light to-wow-gold-dark text-wow-black;
+    @apply hover:from-wow-gold-light hover:via-wow-gold hover:to-wow-gold;
+    @apply shadow-lg hover:shadow-wow-gold/50 hover:shadow-xl;
+    @apply border border-wow-gold-dark;
+    letter-spacing: 0.15em;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-wow-gold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-wow-gold:hover::before {
+    left: 100%;
+  }
+
+  .btn-wow-outline {
+    @apply px-8 py-3 font-inter font-semibold uppercase tracking-wider transition-all duration-300;
+    @apply border-2 border-wow-gold text-wow-gold bg-transparent;
+    @apply hover:bg-wow-gold hover:text-wow-black;
+    @apply hover:shadow-lg hover:shadow-wow-gold/30;
+    letter-spacing: 0.15em;
+  }
+
+  .btn-gta {
+    @apply btn-wow-gold;
+  }
+
+  .btn-gta-outline {
+    @apply btn-wow-outline;
+  }
+
+  .btn-gta-gold {
+    @apply btn-wow-gold;
+  }
+
+  .btn-primary {
+    @apply btn-wow-gold;
+  }
+
+  /* Cards - WoW Style */
+  .card-gta {
+    @apply bg-gradient-to-br from-wow-graphite to-wow-dark backdrop-blur-sm p-6 transition-all duration-300;
+    @apply border border-wow-gold/20 hover:border-wow-gold/50;
+    @apply shadow-lg hover:shadow-wow-gold/20 hover:shadow-xl;
+    @apply hover:-translate-y-1;
+    position: relative;
+  }
+
+  .card-gta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--wow-gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card-gta:hover::before {
+    opacity: 1;
+  }
+
+  .card-cyber {
+    @apply card-gta;
+  }
+
+  /* Glass Effect - Dark with gold accent */
+  .glass-gta {
+    @apply backdrop-blur-lg bg-wow-black/95;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(212, 175, 55, 0.05);
+  }
+
+  /* Loading Bar - Gold */
+  .loading-bar {
+    @apply h-1 bg-gradient-to-r from-wow-gold via-wow-gold-light to-wow-gold;
+    animation: loading 2s ease-in-out infinite;
+  }
+
+  @keyframes loading {
+    0% { width: 0%; }
+    50% { width: 70%; }
+    100% { width: 100%; }
+  }
+
+  /* Progress Bar */
+  .progress-bar {
+    @apply relative h-3 bg-wow-dark overflow-hidden rounded-full;
+  }
+
+  .progress-bar::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Menu Style */
+  .menu-gta {
+    @apply bg-wow-graphite/95 backdrop-blur-md;
+    border-left: 4px solid var(--wow-gold);
+  }
+
+  .menu-item-gta {
+    @apply px-6 py-3 text-white/80 hover:text-wow-gold hover:bg-wow-dark/50;
+    @apply transition-all duration-200 cursor-pointer;
+    @apply border-l-4 border-transparent hover:border-wow-gold;
+    margin-left: -4px;
+  }
+
+  .menu-item-active {
+    @apply text-wow-gold bg-wow-dark/50 border-wow-gold;
+  }
+
+  /* Stats Display */
+  .stat-label {
+    @apply text-wow-light text-sm uppercase tracking-wider font-rajdhani;
+  }
+
+  .stat-value {
+    @apply text-wow-gold text-2xl font-bebas font-bold;
+  }
+
+  /* Divider - Gold gradient */
+  .divider-gta {
+    @apply h-px bg-gradient-to-r from-transparent via-wow-gold/50 to-transparent my-8;
+  }
+
+  /* Badge - Gold */
+  .badge-gta {
+    @apply inline-flex items-center px-3 py-1 text-xs font-medium uppercase tracking-wider;
+    @apply bg-wow-gold/20 text-wow-gold border border-wow-gold/30;
+  }
+
+  .badge-gold {
+    @apply bg-wow-gold/20 text-wow-gold border-wow-gold/30;
+  }
+
+  /* Smooth Animations */
+  .animate-smooth {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Loading Screen Style */
+  .loading-screen {
+    @apply fixed inset-0 z-50 flex items-center justify-center;
+    background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 100%);
+  }
+
+  .loading-content {
+    @apply text-center;
+  }
+
+  .loading-logo {
+    @apply text-6xl font-bebas text-wow-gold mb-8;
+    animation: fadeIn 1s ease-out;
+  }
+
+  .loading-tips {
+    @apply text-wow-light text-sm max-w-md mx-auto;
+    animation: fadeIn 1s ease-out 0.5s both;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+
+  /* Grid Layouts */
+  .grid-gta {
+    @apply grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+  }
+
+  /* Text Styles */
+  .text-muted {
+    @apply text-wow-light;
+  }
+
+  .text-accent {
+    @apply text-wow-gold;
+  }
+
+  /* Input Styles */
+  .input-gta {
+    @apply w-full px-4 py-3 bg-wow-graphite border border-wow-gold/30;
+    @apply focus:border-wow-gold focus:outline-none focus:ring-1 focus:ring-wow-gold;
+    @apply text-white placeholder-wow-light;
+    @apply transition-all duration-200;
+  }
+
+  /* Feature Icon */
+  .feature-icon {
+    @apply inline-flex p-3 bg-wow-gold/10 text-wow-gold rounded-lg;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-wow-gold via-yellow-300 to-wow-gold;
+  }
+
+  /* Section Container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Neon Effects remapped to Gold */
+  .neon-cyan {
+    color: var(--wow-gold);
+  }
+
+  .text-neon-cyan {
+    @apply text-wow-gold;
+  }
+
+  .border-neon-cyan {
+    border-color: var(--wow-gold);
+  }
+
+  .from-neon-cyan {
+    --tw-gradient-from: var(--wow-gold);
+  }
+
+  .to-neon-magenta {
+    --tw-gradient-to: var(--wow-bronze);
+  }
+}
+
+@layer utilities {
+  /* Smooth Scroll */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  /* No Scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Text Shadow */
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.2);
+  }
+
+  /* Gradient Text */
+  .gradient-gold {
+    @apply bg-gradient-to-r from-wow-gold via-yellow-300 to-wow-gold bg-clip-text text-transparent;
+  }
+
+  .gradient-green {
+    @apply bg-gradient-to-r from-wow-gold via-wow-gold-light to-wow-bronze bg-clip-text text-transparent;
+  }
+
+  /* Image optimization */
+  img {
+    @apply max-w-full h-auto;
+  }
+  
+  /* Lazy loading background */
+  img[loading="lazy"] {
+    @apply bg-wow-graphite;
+  }
+
+  /* Image hover effects */
+  .img-zoom {
+    @apply transition-transform duration-500 hover:scale-110;
+  }
+
+  /* Mobile Touch Feedback - Gold */
+  .touch-ripple {
+    @apply absolute inset-0 rounded-lg;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  a:active .touch-ripple,
+  button:active .touch-ripple {
+    animation: ripple 0.4s ease-out;
+  }
+
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  /* Bounce in animation */
+  .animate-bounce-in {
+    animation: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: translateX(-50%) translateY(100%);
+      opacity: 0;
+    }
+    60% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Fade out animation */
+  .animate-fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translateX(-50%) translateY(20px);
+    }
+  }
+
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Gold glow effect */
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.1);
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 1023px) {
+    body {
+      padding-top: 0;
+      padding-bottom: 88px;
+    }
+
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    .container-gta {
+      @apply px-4;
+    }
+
+    h1 {
+      @apply text-4xl;
+    }
+
+    h2 {
+      @apply text-3xl;
+    }
+
+    h3 {
+      @apply text-2xl;
+    }
+
+    .card-gta {
+      @apply p-4;
+    }
+
+    .section-padding {
+      @apply py-12;
+    }
+  }
+
+  /* Safe area insets for notched devices */
+  @supports (padding: env(safe-area-inset-bottom)) {
+    .bottom-navigation {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .mobile-top-bar {
+      padding-top: env(safe-area-inset-top);
+    }
+  }
+
+  /* Smooth scrolling with reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "seo": {
+    "title": "DM 4 BOOST - Premium WoW Boosting Service",
+    "shortTitle": "DM 4 BOOST",
+    "description": "Veteran Challenge Mode team with Realm-First and Title-Level gameplay. Mistwalker+ Level Execution for Mythic+, Raids and PvP Boosting.",
+    "keywords": [
+      "WoW Boosting",
+      "World of Warcraft",
+      "Mythic+ Boost",
+      "Challenge Mode",
+      "CM Boost",
+      "Raid Boost",
+      "PvP Boost",
+      "Mistwalker",
+      "WoW Carry",
+      "M+ Boost"
+    ],
+    "ogImage": "/images/og-image.jpg",
+    "twitterCard": "summary_large_image",
+    "twitterHandle": "@dm4boost",
+    "favicon": "/favicon.ico",
+    "themeColor": "#D4AF37",
+    "locale": "en_US",
+    "url": "https://dm4boost.com"
+  },
+  "legal": {
+    "companyName": "DM 4 BOOST",
+    "email": "contact@dm4boost.com",
+    "privacyEmail": "privacy@dm4boost.com",
+    "dpoEmail": "dpo@dm4boost.com",
+    "supportEmail": "support@dm4boost.com",
+    "lastUpdated": "2025-01-01",
+    "minAge": 16,
+    "copyrightYear": 2025,
+    "dataRetention": {
+      "orderData": "1 Year",
+      "chatLogs": "30 Days",
+      "accountData": "Upon deletion request",
+      "paymentRecords": "As legally required"
+    }
+  },
+  "server": {
+    "name": "DM 4 BOOST",
+    "tagline": "Perfection through Experience",
+    "description": "We are a veteran Challenge Mode team, built by players who have mastered high-quality PvE/PvP content since the earliest competitive seasons.",
+    "ip": "",
+    "port": "",
+    "discord": "https://discord.gg/smjPz5hBVd",
+    "bookingDiscord": "https://discord.gg/qQqFGhBeBe",
+    "maxPlayers": 0,
+    "logo": {
+      "type": "text",
+      "content": "DM4",
+      "_comment": "type can be 'text' or 'image'. For text: content is the letters. For image: content is the path/URL"
+    },
+    "loadingTips": [
+      "Mistwalker+ Level Execution guaranteed",
+      "No risks, only perfection",
+      "By veterans for players",
+      "Safety comes first"
+    ]
+  },
+  "features": [
+    {
+      "id": "mythic-plus",
+      "title": "Mythic+ Dungeons",
+      "description": "Fast and safe Mythic+ runs by experienced CM specialists",
+      "icon": "Swords"
+    },
+    {
+      "id": "raids",
+      "title": "Raid Clears",
+      "description": "Heroic & Mythic Raids with optimized routes and strategies",
+      "icon": "Shield"
+    },
+    {
+      "id": "pvp",
+      "title": "PvP Rating",
+      "description": "Arena and RBG boosts by Rank 1 & Gladiator players",
+      "icon": "Target"
+    },
+    {
+      "id": "achievements",
+      "title": "Achievements",
+      "description": "Unlock rare achievements, mounts and titles",
+      "icon": "Trophy"
+    },
+    {
+      "id": "leveling",
+      "title": "Leveling",
+      "description": "Fast and safe leveling for new characters",
+      "icon": "TrendingUp"
+    },
+    {
+      "id": "coaching",
+      "title": "Coaching",
+      "description": "Personal coaching from experienced high-end players",
+      "icon": "GraduationCap"
+    }
+  ],
+  "gallery": {
+    "images": [
+      { 
+        "id": 1, 
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=600&fit=crop", 
+        "alt": "Epic Gaming Setup", 
+        "title": "High-End Setup",
+        "category": "setup"
+      },
+      { 
+        "id": 2, 
+        "src": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&h=600&fit=crop", 
+        "alt": "Gaming Action", 
+        "title": "In Action",
+        "category": "action"
+      },
+      { 
+        "id": 3, 
+        "src": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=600&fit=crop", 
+        "alt": "Team Gaming", 
+        "title": "Teamwork",
+        "category": "team"
+      },
+      { 
+        "id": 4, 
+        "src": "https://images.unsplash.com/photo-1552820728-8b83bb6b2b0f?w=800&h=600&fit=crop", 
+        "alt": "Victory Moment", 
+        "title": "Victory",
+        "category": "victory"
+      }
+    ]
+  },
+  "aboutUs": {
+    "whoWeAre": {
+      "title": "WHO WE ARE",
+      "content": "We are a veteran Challenge Mode team, built by players who have mastered high-quality PvE/PvP content since the earliest competitive seasons. Our core stems from Realm-First, Speedrunning and Title-Level gameplay, with focus on Mistwalker+ level execution — never risky shortcuts."
+    },
+    "ourTeam": {
+      "title": "OUR TEAM",
+      "points": [
+        "A fixed roster of experienced CM specialists",
+        "Players with Platinum / Gold / Rank 1 history",
+        "Route planners, pull optimizers and cooldown specialists",
+        "Private, organized and consistent teams — no fillers"
+      ],
+      "footer": "Every service is handled internally by the same trusted core."
+    },
+    "whatMakesUsDifferent": {
+      "title": "WHAT MAKES US DIFFERENT",
+      "points": [
+        "Mistwalker+ level routing & execution",
+        "Clean pulls, controlled pace, no panic gameplay",
+        "Full knowledge of skips, timings and recovery scenarios",
+        "Smooth communication from booking → completion"
+      ],
+      "footer": "Our goal is not just completion — it's perfection with safety."
+    }
+  },
+  "rules": [
+    {
+      "id": "respect",
+      "title": "General Behavior",
+      "description": "Be respectful to everyone – no harassment, discrimination or drama. Open a ticket in #book-today FOR QUESTIONS."
+    },
+    {
+      "id": "promotion",
+      "title": "No Advertising",
+      "description": "No spamming, self-promotion or advertising outside of staff channels. Follow Discord Terms of Service."
+    },
+    {
+      "id": "dms",
+      "title": "Direct Messages",
+      "description": "Do NOT reply to direct messages from people who are not staff, e.g. @Owner @Advertiser @Verified Booster."
+    },
+    {
+      "id": "boosting",
+      "title": "Boosting / CM Runs",
+      "description": "Only staff-approved boosts are allowed. Selfplay runs are conducted in VC channels."
+    },
+    {
+      "id": "security",
+      "title": "Security",
+      "description": "Do NOT share account credentials or private information! English is the language during all sessions!"
+    }
+  ],
+  "team": [
+    {
+      "id": "kwonjiyong",
+      "name": "Kwonjiyong",
+      "role": "Owner",
+      "avatar": "https://files.fivemerr.com/images/9f62dc95-2ebd-4ae1-a030-138818c7f72a.png",
+      "discord": "kwonjiyong._",
+      "description": ""
+    },
+    {
+      "id": "vengeful",
+      "name": "Vengeful",
+      "role": "Owner",
+      "avatar": "https://files.fivemerr.com/images/9f62dc95-2ebd-4ae1-a030-138818c7f72a.png",
+      "discord": "__vengeful3591__",
+      "description": ""
+    },
+    {
+      "id": "boo",
+      "name": "Boo",
+      "role": "Owner",
+      "avatar": "https://files.fivemerr.com/images/9f62dc95-2ebd-4ae1-a030-138818c7f72a.png",
+      "discord": "realkingkong",
+      "description": ""
+    }
+  ],
+  "api": {
+    "serverCode": "",
+    "cfxApiUrl": "",
+    "refreshInterval": 30000,
+    "_comment": "Not used for WoW boosting service"
+  },
+  "social": {
+    "discord": "https://discord.gg/smjPz5hBVd",
+    "twitter": "",
+    "youtube": "",
+    "tiktok": "",
+    "instagram": "",
+    "twitch": ""
+  },
+  "whitelist": {
+    "enabled": false,
+    "applicationUrl": "",
+    "requirements": []
+  },
+  "donations": {
+    "enabled": false,
+    "currency": "EUR",
+    "packages": []
+  }
+}
